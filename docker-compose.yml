@@ -1,0 +1,19 @@
+services:
+  database:
+    image: "postgres"
+    volumes:
+      - database-data:/bar/lib/postgresql/ata
+  backend:
+    container_name: backend
+    build: 
+      context: ./backend
+    dockerfile: Dockerfile
+  frontend:
+    container_name: frontend
+    build: 
+      context: ./frontend
+    dockerfile: Dockerfile
+volumes:
+  database-data: 
+    
+  
