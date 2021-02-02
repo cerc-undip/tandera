@@ -9,6 +9,11 @@ import (
 
 func CreateUser(c echo.Context) error {
 	user := new(types.User)
+	user.ID = 100
+
+	if err := c.Bind(user); err != nil {
+		return err
+	}
 	return c.JSON(http.StatusCreated, user)
 }
 
