@@ -2,7 +2,7 @@ services:
   database:
     image: "postgres"
     volumes:
-      - database-data:/bar/lib/posrgresql/ata
+      - database-data:/bar/lib/postgresql/ata
   backend:
     container_name: backend
     build: 
