@@ -2,7 +2,11 @@ services:
   database:
     image: "postgres"
     volumes:
+<<<<<<< HEAD
       - database-data:/var/lib/postgresql/data
+=======
+      - database-data:/var/lib/postgresql/ata
+>>>>>>> 49aff9787685d0b11ee70c4dbac4cfbe76ca1099
   backend:
     container_name: backend
     build: 
