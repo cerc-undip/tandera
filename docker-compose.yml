@@ -2,17 +2,17 @@ services:
   database:
     image: "postgres"
     volumes:
-      - database-data:/bar/lib/postgresql/ata
+      - database-data:/var/lib/postgresql/data
   backend:
     container_name: backend
     build: 
       context: ./backend
-    dockerfile: Dockerfile
+      dockerfile: Dockerfile
   frontend:
     container_name: frontend
     build: 
       context: ./frontend
-    dockerfile: Dockerfile
+      dockerfile: Dockerfile
 volumes:
   database-data: 
     
