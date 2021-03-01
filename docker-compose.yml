@@ -1,23 +1,20 @@
 services:
   database:
+    container_name: database
     image: "postgres"
+    environment:
+      POSTGRES_PASSWORD: tandera
     volumes:
-<<<<<<< HEAD
       - database-data:/var/lib/postgresql/data
-=======
-      - database-data:/var/lib/postgresql/ata
->>>>>>> 49aff9787685d0b11ee70c4dbac4cfbe76ca1099
   backend:
     container_name: backend
-    build: 
+    build:
       context: ./backend
       dockerfile: Dockerfile
   frontend:
     container_name: frontend
-    build: 
+    build:
       context: ./frontend
       dockerfile: Dockerfile
 volumes:
-  database-data: 
-    
-  
+  database-data:
